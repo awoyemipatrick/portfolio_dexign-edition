@@ -15,9 +15,9 @@
 ```bash
 git clone https://github.com/awoyemipatrick/portfolio_dexign-edition.git
 # or
-gh repo clone awoyemipatrick/my-personal-portfolio
+gh repo clone awoyemipatrick/portfolio_dexign-edition
 # & Change dir
-cd my-personal-portfolio
+cd portfolio_dexign-edition
 # &
 run 'npm install'
 ```
@@ -69,7 +69,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Value Horizons](https://valuehorizons.vercel.app/)
+- Live Site URL: [Value Horizons]()
 
 ## My process
 
@@ -83,9 +83,9 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [Sanity Documentation](https://www.sanity.io/docs) - Sanity is headless CMS. Learn about Sanity.
+- [Sanity CMS](https://www.sanity.io/docs) - Sanity is headless CMS. Learn about Sanity.
 - [Mailchimp](https://mailchimp.com/) - learn about Email marketing and automations platform.
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Next.js](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Tailwindcss](https://tailwindcss.com) - A utility-first CSS framework for styles.
 
 ### What I learned
