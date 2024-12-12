@@ -1,9 +1,12 @@
-import React from 'react'
+import Logo from "@/public/assets/value.png";
+import Image from "next/image";
 
-const Logo = () => {
+const LogoPage = () => {
   return (
-    <div>Logo</div>
-  )
-}
+    <div className="p-[2px] bg-[#edbf6d] rounded-full">
+      <Image src={Logo} alt="Logo" width={50} height={50} className="rounded-full" />
+    </div>
+  );
+};
 
-export default Logo
+export default LogoPage;
