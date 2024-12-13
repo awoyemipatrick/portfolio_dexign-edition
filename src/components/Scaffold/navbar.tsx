@@ -18,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="flex items-center justify-between gap-8 py-4 px-4 md:px-8 shadow-md bg-white dark:bg-gray-900 transition-colors">
+    <header className="flex items-center justify-between gap-8 py-4 px-4 md:px-8 shadow-md transition-colors">
       <div>
         <Logo />
       </div>
