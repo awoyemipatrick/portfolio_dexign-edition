@@ -2,7 +2,7 @@
 
 ## MY PERSONAL PORTFOLIO
 
- [![Forks](https://img.shields.io/github/forks/awoyemipatrick/portfolio_dexign-edition?style=social)](https://github.com/awoyemipatrick/portfolio_dexign-edition/network/members)  [![Stars](https://img.shields.io/github/stars/awoyemipatrick/portfolio_dexign-edition?style=social)](https://github.com/awoyemipatrick/portfolio_dexign-edition/stargazers) [![Issues](https://img.shields.io/github/issues/awoyemipatrick/my-personal-portfolio)](https://github.com/awoyemipatrick/portfolio_dexign-edition/issues) [![Pull Requests](https://img.shields.io/github/issues-pr/awoyemipatrick/portfolio_dexign-edition)](https://github.com/awoyemipatrick/portfolio_dexign-edition/pulls)
+ [![Forks](https://img.shields.io/github/forks/awoyemipatrick/portfolio_dexign-edition?style=social)](https://github.com/awoyemipatrick/portfolio_dexign-edition/network/members)  [![Stars](https://img.shields.io/github/stars/awoyemipatrick/portfolio_dexign-edition?style=social)](https://github.com/awoyemipatrick/portfolio_dexign-edition/stargazers) [![Issues](https://img.shields.io/github/issues/awoyemipatrick/portfolio_dexign-edition)](https://github.com/awoyemipatrick/portfolio_dexign-edition/issues) [![Pull Requests](https://img.shields.io/github/issues-pr/awoyemipatrick/portfolio_dexign-edition)](https://github.com/awoyemipatrick/portfolio_dexign-edition/pulls)
 
 ### Contributors
 
