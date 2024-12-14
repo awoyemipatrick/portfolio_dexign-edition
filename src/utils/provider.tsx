@@ -1,17 +1,30 @@
-'use client'
-import React from "react"
-import { ThemeProvider } from 'next-themes'
+"use client";
+
+import React, { useState, useEffect } from "react";
+import { ThemeProvider as NextThemeProvider } from "next-themes";
 
 interface Props {
-    children: React.ReactNode
+  children: React.ReactNode;
 }
 
 const Provider = ({ children }: Props) => {
-    return (
-        <ThemeProvider attribute='class' defaultTheme="">
-            {children}
-        </ThemeProvider>
-    )
-}
+  const [mounted, setMounted] = useState(false);
 
-export default Provider
+  // To ensure the theme matches on both server and client
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    // To prevent client rendering until hydration matches
+    return <div className="invisible">{children}</div>;
+  }
+
+  return (
+    <NextThemeProvider attribute="class" defaultTheme="dark">
+      {children}
+    </NextThemeProvider>
+  );
+};
+
+export default Provider;

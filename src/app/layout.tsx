@@ -28,12 +28,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+     <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased transition-colors`}
       >
         <Provider>
           <Navbar />
-          {children}
+          <main className="min-h-screen px-4 md:px-8">{children}</main>
         </Provider>
       </body>
     </html>

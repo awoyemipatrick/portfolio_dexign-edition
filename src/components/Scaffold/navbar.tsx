@@ -1,21 +1,37 @@
-'use client'
-import React, { useState } from "react";
-import Logo from "./logo";
-import Links from "./links";
-import { CloseIcon, DayIcon, MenuIcon, NightIcon } from "../../../icons/icons";
+'use client';
+import React, { useState, useRef, useEffect } from 'react';
+import Logo from './logo';
+import Links from './links';
+import { CloseIcon, MenuIcon } from '../../../icons/icons';
+import ThemeSwitch from '../themeSwitch';
 
 const Navbar = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-    document.documentElement.classList.toggle("dark", !isDarkMode);
-  };
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  // Close menu if clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target as Node)
+      ) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    if (isMobileMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isMobileMenuOpen]);
 
   return (
     <header className="flex items-center justify-between gap-8 py-4 px-4 md:px-8 shadow-md transition-colors">
@@ -26,30 +42,29 @@ const Navbar = () => {
         <Links />
       </div>
       <div className="flex items-center gap-4">
-           {/* Theme Toggle */}
-           <button
-          onClick={toggleTheme}
-          className="p-2 bg-gray-200 dark:bg-gray-700 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-          aria-label="Toggle Theme"
-        >
-          {isDarkMode ? <NightIcon/> : <DayIcon/>}
-        </button>
-
+        {/* Theme Toggle */}
+        <div>
+        <ThemeSwitch/>
+        </div>
         {/* Mobile Menu */}
         <div className="block md:hidden">
           <button
             onClick={toggleMobileMenu}
-            className="p-2 text-center bg-gray-200 dark:bg-gray-700 rounded-full"
+            className="p-2 text-center rounded-full"
             aria-label="Open Menu"
+            aria-expanded={isMobileMenuOpen}
           >
-           {isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
+            {isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="absolute top-24 h-full left-0 w-full bg-white dark:bg-gray-800 shadow-lg transition-transform">
+        <div
+          ref={mobileMenuRef}
+          className="absolute top-16 left-0 w-full shadow-lg transition-transform z-10"
+        >
           <Links />
         </div>
       )}
