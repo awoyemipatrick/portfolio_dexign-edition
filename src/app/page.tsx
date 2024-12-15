@@ -1,3 +1,14 @@
-export default function Home() {
-  return <div>Home</div>;
+import React from 'react'
+import Hero from '../components/Hero/hero';
+
+
+
+const Home = () => {
+  return (
+    <div>
+      <Hero/>
+    </div>
+  )
 }
+
+export default Home;

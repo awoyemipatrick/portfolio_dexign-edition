@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -13,8 +12,8 @@ const NavLinks = ({ item }: { item: LinkItem }) => {
     <div>
       <Link
         href={item.href}
-        className={`min-w-[100px] px-4 py-2 mx-1 rounded-2xl text-sm text-center transition-all duration-200 transform hover:scale-105 hover:font-bold 
-          ${pathname === item.href ? "bg-indigo-500 text-white" : "bg-gray-200 dark:bg-gray-700 dark:text-white"}`}
+        className={`bg-[size:100%_200%] bg-top bg-customGradientDarkBg hover:bg-bottom dark:bg-[size:100%_200%] dark:bg-top dark:bg-customGradientLightBg dark:hover:bg-bottom px-4 py-2 mx-1 rounded-2xl text-sm text-center transition-all duration-1000 ease-out transform hover:scale-105 text-black 
+       ${pathname === item.href ? "" : ""}`}
       >
         {item.label}
       </Link>

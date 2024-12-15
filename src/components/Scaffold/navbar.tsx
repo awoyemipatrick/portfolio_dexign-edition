@@ -63,7 +63,7 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div
           ref={mobileMenuRef}
-          className="absolute top-16 left-0 w-full shadow-lg transition-transform z-10"
+          className="absolute top-16 mt-14 left-0 w-full shadow-lg transition-transform z-10"
         >
           <Links />
         </div>

@@ -27,6 +27,12 @@ export default {
         warmGold: "#D4A373", // Buttons, links
         sageGreen: "#A3B18A", // Secondary accents
       },
+      backgroundImage: {
+        darkBg: "url('./public')",
+        lightBg: "url('./public')",
+        customGradientLightBg: 'linear-gradient(to top, #10B981 50%, #ffffff 0%)',
+        customGradientDarkBg: 'linear-gradient(to top,#3B82F6 50%, #ffffff 0%)',
+      },
     },
   },
   plugins: [],

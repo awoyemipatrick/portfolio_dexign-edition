@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased transition-colors`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased container mx-auto transition-colors`}
       >
         <Provider>
           <Navbar />

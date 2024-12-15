@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
 html {
-    @apply bg-softCream text-charcoalGray transition-colors;
-  }
-  
-  html.dark {
-    @apply bg-darkNavy text-offWhite;
-  }
-  
+  @apply bg-softCream text-charcoalGray transition-colors;
+}
+
+html.dark {
+  @apply bg-darkNavy text-offWhite;
+}
+
+
